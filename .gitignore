@@ -1,0 +1,15 @@
+# Node generated files
+node_modules
+npm-debug.log
+# OS generated files
+Thumbs.db
+.DS_Store
+# Ignored files
+*.js
+*.map
+*.d.ts
+/.vscode
+*.tgz
+*.ngsummary.json
+# Don't ignore the following files
+!rollup.config.js
