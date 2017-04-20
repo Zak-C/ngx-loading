@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A loading spinner for Angular 4.",
   "main": "index.js",
   "scripts": {
