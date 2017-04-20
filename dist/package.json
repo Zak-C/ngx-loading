@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A loading spinner for Angular 4.",
   "main": "index.js",
   "repository": {
@@ -23,18 +23,17 @@
   },
   "homepage": "https://github.com/Zak-C/ngx-loading#readme",
   "peerDependencies": {
-    "@angular/core": "^4.0.2"
+    "@angular/core": "^4.0.0"
   },
   "devDependencies": {
+    "@angular/core": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/compiler-cli": "^4.0.2",
     "rollup": "^0.41.6",
     "rxjs": "^5.3.0",
     "tslint": "^5.1.0",
     "typescript": "^2.2.2",
     "webpack": "^2.4.1",
     "zone.js": "^0.8.5"
-  },
-  "dependencies": {
-    "@angular/compiler": "^4.0.2",
-    "@angular/compiler-cli": "^4.0.2"
   }
 }
