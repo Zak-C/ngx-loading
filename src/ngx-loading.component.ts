@@ -17,7 +17,7 @@ export const ANIMATION_TYPE = {
             <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.threeBounce" class="spinner-three-bounce">
                 <div class="bounce1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="bounce2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
-                <div class="bounce3" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+                <div class="bounce3" [ngStyle]="{'background-color': loadingConfig?.tertiaryColour}"></div>
             </div>
 
             <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.rotatingPlane" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>

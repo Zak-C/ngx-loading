@@ -4,6 +4,7 @@ export interface ILoadingConfig {
     animationType?: string;
     primaryColour?: string;
     secondaryColour?: string;
+    tertiaryColour?: string;
 }
 
 export class LoadingConfig implements ILoadingConfig {
@@ -12,4 +13,5 @@ export class LoadingConfig implements ILoadingConfig {
     animationType?: string;
     primaryColour?: string;
     secondaryColour?: string;
+    tertiaryColour?: string;
 }
