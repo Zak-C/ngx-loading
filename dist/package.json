@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A loading spinner for Angular 4.",
   "main": "index.js",
   "repository": {
@@ -9,12 +9,15 @@
   },
   "keywords": [
     "Angular",
+    "Angular 4",
+    "Angular4",
     "ng",
     "load",
     "loading",
     "spinner",
     "busy",
-    "wait"
+    "wait",
+    "ngx-loading"
   ],
   "author": "Zak Cox",
   "license": "ISC",

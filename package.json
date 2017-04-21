@@ -1,13 +1,14 @@
 {
   "name": "ngx-loading",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A loading spinner for Angular 4.",
   "main": "index.js",
   "scripts": {
     "transpile": "ngc",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/ngx-loading.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ngx-loading.umd.min.js",
-    "prepublish": "npm run transpile && npm run package && npm run minify",
+    "copyReadme": "COPY README.md dist\\README.md",
+    "prepublish": "npm run transpile && npm run package && npm run minify && npm run copyReadme",
     "publish": "cd dist && npm publish"
   },
   "repository": {
@@ -16,12 +17,15 @@
   },
   "keywords": [
     "Angular",
+    "Angular 4",
+    "Angular4",
     "ng",
     "load",
     "loading",
     "spinner",
     "busy",
-    "wait"
+    "wait",
+    "ngx-loading"
   ],
   "author": "Zak Cox",
   "license": "ISC",
