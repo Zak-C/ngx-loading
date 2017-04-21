@@ -1,28 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ILoadingConfig } from './ngx-loading.config';
-
-export const ANIMATION_TYPE = {
-    threeBounce: 'three-bounce',
-    rotatingPlane: 'rotating-plane',
-    rectangleBounce: 'rectangle-bounce',
-    wanderingCubes: 'wandering-cubes'
-}
+import { ILoadingConfig, ANIMATION_TYPES } from './ngx-loading.config';
 
 @Component({
     selector: 'ngx-loading',
     template: `
         <div *ngIf="show" class="backdrop" [ngStyle]="{'border-radius': loadingConfig?.backdropBorderRadius, 'background-color': loadingConfig?.backdropBackgroundColour}"></div>
         <div *ngIf="show">
-            <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.threeBounce" class="spinner-three-bounce">
+            <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.threeBounce" class="spinner-three-bounce">
                 <div class="bounce1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="bounce2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
                 <div class="bounce3" [ngStyle]="{'background-color': loadingConfig?.tertiaryColour}"></div>
             </div>
 
-            <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.rotatingPlane" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+            <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rotatingPlane" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
 
-            <div class="spinner-rectangle-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.rectangleBounce">
+            <div class="spinner-rectangle-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rectangleBounce">
                 <div class="rect1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="rect2" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="rect3" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
@@ -30,7 +23,7 @@ export const ANIMATION_TYPE = {
                 <div class="rect5" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
             </div>
 
-            <div class="spinner-wandering-cubes" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPE.wanderingCubes">
+            <div class="spinner-wandering-cubes" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.wanderingCubes">
                 <div class="cube1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="cube2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
             </div>
@@ -268,7 +261,7 @@ export class LoadingComponent implements OnInit {
     @Input() show: boolean;
     @Input() loadingConfig: ILoadingConfig;
 
-    public ANIMATION_TYPE = ANIMATION_TYPE;
+    public ANIMATION_TYPES = ANIMATION_TYPES;
     constructor() { }
 
     ngOnInit() { }
@@ -276,20 +269,20 @@ export class LoadingComponent implements OnInit {
     public getAnimationType(animationType: string): string {
         let animationTypeSet: string;
         switch (animationType) {
-            case ANIMATION_TYPE.threeBounce:
-                animationTypeSet = ANIMATION_TYPE.threeBounce;
+            case ANIMATION_TYPES.threeBounce:
+                animationTypeSet = ANIMATION_TYPES.threeBounce;
                 break;
-            case ANIMATION_TYPE.rectangleBounce:
-                animationTypeSet = ANIMATION_TYPE.rectangleBounce;
+            case ANIMATION_TYPES.rectangleBounce:
+                animationTypeSet = ANIMATION_TYPES.rectangleBounce;
                 break;
-            case ANIMATION_TYPE.rotatingPlane:
-                animationTypeSet = ANIMATION_TYPE.rotatingPlane;
+            case ANIMATION_TYPES.rotatingPlane:
+                animationTypeSet = ANIMATION_TYPES.rotatingPlane;
                 break;
-            case ANIMATION_TYPE.wanderingCubes:
-                animationTypeSet = ANIMATION_TYPE.wanderingCubes;
+            case ANIMATION_TYPES.wanderingCubes:
+                animationTypeSet = ANIMATION_TYPES.wanderingCubes;
                 break;
             default:
-                animationTypeSet = ANIMATION_TYPE.threeBounce;
+                animationTypeSet = ANIMATION_TYPES.threeBounce;
         }
         return animationTypeSet;
     }
