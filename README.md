@@ -53,9 +53,9 @@ export class AppComponent implements OnInit {
         animationType: ANIMATION_TYPES.rotatingPlane,
         backdropBorderRadius: '14px',
         backdropBackgroundColour: 'rgba(0,0,0,0.3)',
-        primaryColour: '#0000ff',
-        secondaryColour: '#00ff00',
-        tertiaryColour: '#ff0000'
+        primaryColour: 'rgb(41, 111, 173)',
+        secondaryColour: 'rgb(41, 111, 173)',
+        tertiaryColour: 'rgb(41, 111, 173)'
     };
 
     constructor(private authService: AuthService) { }
