@@ -5,6 +5,7 @@ export interface ILoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
+    [key: string]: string | undefined;
 }
 
 export class LoadingConfig implements ILoadingConfig {
@@ -14,6 +15,16 @@ export class LoadingConfig implements ILoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
+    [key: string]: string | undefined;
+
+    constructor(config: ILoadingConfig = {}) {
+        this.backdropBorderRadius = config.backdropBorderRadius;
+        this.backdropBackgroundColour = config.backdropBackgroundColour;
+        this.animationType = config.animationType;
+        this.primaryColour = config.primaryColour;
+        this.secondaryColour = config.secondaryColour;
+        this.tertiaryColour = config.tertiaryColour;
+    }
 }
 
 export const ANIMATION_TYPES = {

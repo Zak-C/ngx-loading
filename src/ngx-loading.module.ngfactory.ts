@@ -9,16 +9,22 @@
 import * as import0 from '@angular/core';
 import * as import1 from './ngx-loading.module';
 import * as import2 from '@angular/common';
+import * as import3 from './ngx-loading.service';
 class LoadingModuleInjector extends import0.ɵNgModuleInjector<import1.LoadingModule> {
   _CommonModule_0:import2.CommonModule;
   _LoadingModule_1:import1.LoadingModule;
   __NgLocalization_2:import2.NgLocaleLocalization;
+  __LoadingConfigService_3:import3.LoadingConfigService;
   constructor(parent:import0.Injector) {
     super(parent,([] as any[]),([] as any[]));
   }
   get _NgLocalization_2():import2.NgLocaleLocalization {
     if ((this.__NgLocalization_2 == null)) { (this.__NgLocalization_2 = new import2.NgLocaleLocalization(this.parent.get(import0.LOCALE_ID))); }
     return this.__NgLocalization_2;
+  }
+  get _LoadingConfigService_3():import3.LoadingConfigService {
+    if ((this.__LoadingConfigService_3 == null)) { (this.__LoadingConfigService_3 = new import3.LoadingConfigService(this.parent.get('loadingConfig',(null as any)))); }
+    return this.__LoadingConfigService_3;
   }
   createInternal():import1.LoadingModule {
     this._CommonModule_0 = new import2.CommonModule();
@@ -29,10 +35,11 @@ class LoadingModuleInjector extends import0.ɵNgModuleInjector<import1.LoadingMo
     if ((token === import2.CommonModule)) { return this._CommonModule_0; }
     if ((token === import1.LoadingModule)) { return this._LoadingModule_1; }
     if ((token === import2.NgLocalization)) { return this._NgLocalization_2; }
+    if ((token === import3.LoadingConfigService)) { return this._LoadingConfigService_3; }
     return notFoundResult;
   }
   destroyInternal():void {
   }
 }
 export const LoadingModuleNgFactory:import0.NgModuleFactory<import1.LoadingModule> = new import0.NgModuleFactory<any>(LoadingModuleInjector,import1.LoadingModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUmVwby9uZ3gtbG9hZGluZy9zcmMvbmd4LWxvYWRpbmcubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1JlcG8vbmd4LWxvYWRpbmcvc3JjL25neC1sb2FkaW5nLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUmVwby9uZ3gtbG9hZGluZy9zcmMvbmd4LWxvYWRpbmcubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1JlcG8vbmd4LWxvYWRpbmcvc3JjL25neC1sb2FkaW5nLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==

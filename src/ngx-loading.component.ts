@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ILoadingConfig, ANIMATION_TYPES } from './ngx-loading.config';
+import { LoadingConfigService } from './ngx-loading.service';
+import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.config';
 
 @Component({
     selector: 'ngx-loading',
@@ -259,12 +260,39 @@ import { ILoadingConfig, ANIMATION_TYPES } from './ngx-loading.config';
 })
 export class LoadingComponent implements OnInit {
     @Input() show: boolean;
-    @Input() loadingConfig: ILoadingConfig;
+    @Input() config: ILoadingConfig = new LoadingConfig();
 
     public ANIMATION_TYPES = ANIMATION_TYPES;
-    constructor() { }
 
-    ngOnInit() { }
+    public loadingConfig: ILoadingConfig = {
+        animationType: '',
+        backdropBackgroundColour: '',
+        backdropBorderRadius: '',
+        primaryColour: '',
+        secondaryColour: '',
+        tertiaryColour: ''
+    };
+
+    private defaultConfig: ILoadingConfig = {
+        animationType: ANIMATION_TYPES.threeBounce,
+        backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',
+        backdropBorderRadius: '0px',
+        primaryColour: '#ffffff',
+        secondaryColour: '#ffffff',
+        tertiaryColour: '#ffffff'
+    }
+
+    constructor(private loadingConfigService: LoadingConfigService) { }
+
+    ngOnInit() {
+        for (let option in this.defaultConfig) {
+            this.loadingConfig[option] = this.config[option] != null ? this.config[option] : '';
+
+            if (this.loadingConfig[option] == '') {
+                this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+            }
+        };
+    }
 
     public getAnimationType(animationType: string): string {
         let animationTypeSet: string;

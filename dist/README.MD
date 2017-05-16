@@ -35,13 +35,10 @@ import { LoadingModule } from 'ngx-loading';
 export class AppModule { }
 ```
 
-Import the `LoadingConfig` and `ANIMATION_TYPES` into your application component. Importing these two items are optional, however, this is a required step if you wish to customise ngx-loading. `LoadingConfig` is used to create a set of configuration options for ngx-loading. `ANIMATION_TYPES` are a set of constants that can be referenced, when setting the `animationType` configuration option.
-
 You must create a boolean (e.g. `loading` below) that is accessible from the component which will contain ngx-loading. This boolean is used as an input into ngx-loading, and will determine when the loading spinner is visible.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { LoadingConfig, ANIMATION_TYPES } from 'ngx-loading';
 
 @Component({
     //...
@@ -49,14 +46,6 @@ import { LoadingConfig, ANIMATION_TYPES } from 'ngx-loading';
 export class AppComponent implements OnInit {
     //...
     public loading = false;
-    public loadingConfig: LoadingConfig = {
-        animationType: ANIMATION_TYPES.rotatingPlane,
-        backdropBorderRadius: '14px',
-        backdropBackgroundColour: 'rgba(0,0,0,0.3)',
-        primaryColour: 'rgb(41, 111, 173)',
-        secondaryColour: 'rgb(41, 111, 173)',
-        tertiaryColour: 'rgb(41, 111, 173)'
-    };
 
     constructor(private authService: AuthService) { }
 
@@ -76,13 +65,13 @@ export class AppComponent implements OnInit {
 }
 ```
 
-Next, add the ngx-loading component selector to your application component's template. Set the `[show]` input variable of ngx-loading to point to your boolean, which will determine when ngx-loading is visible. Optionally set the `[loadingConfig]` input variable of ngx-loading to point to your `LoadingConfig` object. If the `[loadingConfig]` input variable is not set, the ngx-loading default styling options will be used. 
+Next, add the ngx-loading component selector to your application component's template. Set the `[show]` input variable of ngx-loading to point to your boolean, which will determine when ngx-loading is visible. Optionally set the `[config]` input variable of ngx-loading to setup custom configuration options. If the `[config]` input variable is not set, the globally configured configuration will be used, if set. If no config options are set, the ngx-loading default config options will be used. See - [Config options](#config-options) for further information.
 
 NOTE: ngx-loading will fill the entirety of its parent component. If you wish for ngx-loading to only fill a specific element within your component, ensure that ngx-loading is a child element of that element, and that the containing element has its `position` attribute set to `relative`.
 
 ```html
 <div class="my-container">
-    <ngx-loading [show]="loading" [loadingConfig]="loadingConfig"></ngx-loading>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
     //...
 </div>
 ```
@@ -93,10 +82,42 @@ The ngx-loading input parameters are displayed below.
 | Input | Required | Details |
 | ---- | ---- | ---- |
 | show | Required | A boolean, which will determine when ngx-loading is visible. |
-| loadingConfig | Optional | A set of configuration options for ngx-loading. If this is not specified, the system default options will be used. See - [LoadingConfig options](#loadingconfig-options). |
+| config | Optional | A set of configuration options for ngx-loading. If this is not specified, the globally configured configuration will be used, if set. If no config options are set, the ngx-loading default config options will be used. See - [Config options](#config-options). |
 
-## LoadingConfig options
-The LoadingConfig options are displayed below. Each of these are optional, and passing a LoadingConfig to ngx-loading is itself, optional. If a LoadingConfig is not set, the system default options will be used.
+## Config options
+Config options can be set globally (using the `.forRoot() module import statement`), as well as being passed into each ngx-loading instance, if required. Config options that are passed into an ngx-loading element will override any custom global config options that have been set. A combination of the two can be used together if appropriate. If no config is set, the default ngx-loading config options will be used. Please see below for an example custom configuration setup, using both global and local configurations.
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { CoreModule } from './core/core.module';
+import { LoadingModule, LoadingConfig, ANIMATION_TYPES } from 'ngx-loading';
+
+@NgModule({
+  //...
+  imports: [
+    //...
+    LoadingModule.forRoot(new LoadingConfig({
+        animationType: ANIMATION_TYPES.wanderingCubes,
+        backdropBackgroundColour: 'rgba(0,0,0,0.1)', backdropBorderRadius: '4px',
+        primaryColour: '#ffffff', secondaryColour: '#ffffff', tertiaryColour: '#ffffff'
+    }))
+  ],
+  //...
+})
+export class AppModule { }
+```
+
+```html
+<div class="my-container">
+    <ngx-loading [show]="loading" [config]="{ animationType: ANIMATION_TYPES.rectangleBounce,
+        backdropBackgroundColour: 'rgba(255,255,255,0.3)', backdropBorderRadius: '10px',
+        primaryColour: '#ffffff', secondaryColour: '#ffffff', tertiaryColour: '#ffffff' }"></ngx-loading>
+    //...
+</div>
+```
+
+The config options are displayed below. Each of the properties are optional, and passing a config to ngx-loading is itself, optional. 
 
 | Option | Required | Default | Details |
 | ---- | ---- | ---- | ---- |
