@@ -91,17 +91,20 @@ Config options can be set globally (using the `.forRoot() module import statemen
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CoreModule } from './core/core.module';
-import { LoadingModule, LoadingConfig, ANIMATION_TYPES } from 'ngx-loading';
+import { LoadingModule, ANIMATION_TYPES } from 'ngx-loading';
 
 @NgModule({
   //...
   imports: [
     //...
-    LoadingModule.forRoot(new LoadingConfig({
+    LoadingModule.forRoot({
         animationType: ANIMATION_TYPES.wanderingCubes,
-        backdropBackgroundColour: 'rgba(0,0,0,0.1)', backdropBorderRadius: '4px',
-        primaryColour: '#ffffff', secondaryColour: '#ffffff', tertiaryColour: '#ffffff'
-    }))
+        backdropBackgroundColour: 'rgba(0,0,0,0.1)', 
+        backdropBorderRadius: '4px',
+        primaryColour: '#ffffff', 
+        secondaryColour: '#ffffff', 
+        tertiaryColour: '#ffffff'
+    })
   ],
   //...
 })
