@@ -6,17 +6,17 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
 @Component({
     selector: 'ngx-loading',
     template: `
-        <div *ngIf="show" class="backdrop" [ngStyle]="{'border-radius': loadingConfig?.backdropBorderRadius, 'background-color': loadingConfig?.backdropBackgroundColour}"></div>
+        <div *ngIf="show" class="backdrop" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}" [ngStyle]="{'border-radius': loadingConfig?.backdropBorderRadius, 'background-color': loadingConfig?.backdropBackgroundColour}"></div>
         <div *ngIf="show">
-            <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.threeBounce" class="spinner-three-bounce">
+            <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.threeBounce" class="spinner-three-bounce" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
                 <div class="bounce1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="bounce2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
                 <div class="bounce3" [ngStyle]="{'background-color': loadingConfig?.tertiaryColour}"></div>
             </div>
 
-            <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rotatingPlane" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+            <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rotatingPlane" [ngStyle]="{'background-color': loadingConfig?.primaryColour}" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}"></div>
 
-            <div class="spinner-rectangle-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rectangleBounce">
+            <div class="spinner-rectangle-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rectangleBounce" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
                 <div class="rect1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="rect2" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="rect3" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
@@ -24,16 +24,14 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 <div class="rect5" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
             </div>
 
-            <div class="spinner-wandering-cubes" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.wanderingCubes">
+            <div class="spinner-wandering-cubes" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.wanderingCubes" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
                 <div class="cube1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
                 <div class="cube2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
             </div>
         </div>
     `,
     styles: [
-        `
-            /* Three Bounce styles */
-
+        `       
             .backdrop {
                 z-index: 50;
                 position: absolute;
@@ -43,6 +41,8 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 bottom: 0;
                 background-color: rgba(0, 0, 0, 0.3);
             }
+
+            /* Three Bounce styles */
 
             .spinner-three-bounce {
                 width: 70px;
@@ -254,6 +254,10 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                     transform: rotate(-360deg);
                     -webkit-transform: rotate(-360deg);
                 }
+            }  
+            
+            .full-screen {
+                position: fixed;
             }
         `
     ]
@@ -268,6 +272,7 @@ export class LoadingComponent implements OnInit {
         animationType: '',
         backdropBackgroundColour: '',
         backdropBorderRadius: '',
+        fullScreenBackdrop: false,
         primaryColour: '',
         secondaryColour: '',
         tertiaryColour: ''
@@ -277,6 +282,7 @@ export class LoadingComponent implements OnInit {
         animationType: ANIMATION_TYPES.threeBounce,
         backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',
         backdropBorderRadius: '0px',
+        fullScreenBackdrop: false,
         primaryColour: '#ffffff',
         secondaryColour: '#ffffff',
         tertiaryColour: '#ffffff'
@@ -286,10 +292,18 @@ export class LoadingComponent implements OnInit {
 
     ngOnInit() {
         for (let option in this.defaultConfig) {
-            this.loadingConfig[option] = this.config[option] != null ? this.config[option] : '';
+            if (typeof this.loadingConfig[option] == "boolean") {
+                this.loadingConfig[option] = this.config[option] != null ? this.config[option] : false;
 
-            if (this.loadingConfig[option] == '') {
-                this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+                if (this.loadingConfig[option] == false) {
+                    this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+                }
+            } else {
+                this.loadingConfig[option] = this.config[option] != null ? this.config[option] : '';
+
+                if (this.loadingConfig[option] == '') {
+                    this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+                }
             }
         };
     }
