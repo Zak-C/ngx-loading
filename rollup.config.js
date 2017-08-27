@@ -7,5 +7,9 @@ export default {
     globals: {
         '@angular/core': 'ng.core',
         '@angular/common': 'ng.common'
-    }
+    },
+    external: [
+        '@angular/core',
+        '@angular/common'
+    ]
 }
