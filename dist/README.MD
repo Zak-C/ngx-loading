@@ -127,6 +127,7 @@ The config options are displayed below. Each of the properties are optional, and
 | animationType | Optional | ANIMATION_TYPES.threeBounce | The animation to be used within ngx-loading. Use the ANIMATION_TYPES constant to select valid options. |
 | backdropBorderRadius | Optional | 0 | The border-radius to be applied to the ngx-loading backdrop, e.g. '14px'. |
 | backdropBackgroundColour | Optional | rgba(0, 0, 0, 0.3) | The background-color to be applied to the ngx-loading backdrop, e.g. 'rgba(255, 255, 255, 0.2)'. |
+| fullScreenBackdrop | Optional | false | Set to true to make the backdrop full screen, with the loading animation centered in the middle of the screen. |
 | primaryColour | Optional | #ffffff | The primary colour, which will be applied to the ngx-loading animation. |
 | secondaryColour | Optional | #ffffff | The secondary colour, which will be applied to the ngx-loading animation (where appropriate). |
 | tertiaryColour | Optional | #ffffff | The tertiary colour, which will be applied to the ngx-loading animation (where appropriate). |
