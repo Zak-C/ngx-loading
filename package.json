@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A loading spinner for Angular 4.",
   "main": "index.js",
   "scripts": {
@@ -37,10 +37,12 @@
     "dist/*"
   ],
   "peerDependencies": {
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^4.0.0",
+    "@angular/common": "^4.0.0"
   },
   "devDependencies": {
     "@angular/core": "^4.0.2",
+    "@angular/common": "^4.0.2",
     "@angular/compiler": "^4.0.2",
     "@angular/compiler-cli": "^4.0.2",
     "rollup": "^0.41.6",
