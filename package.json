@@ -7,7 +7,7 @@
     "transpile": "ngc",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/ngx-loading.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ngx-loading.umd.min.js",
-    "copyReadme": "COPY README.md dist\\README.md",
+    "copyReadme": "copyfiles README.md dist",
     "prepublish": "npm run transpile && npm run package && npm run minify && npm run copyReadme",
     "publish": "cd dist && npm publish"
   },
@@ -41,10 +41,11 @@
     "@angular/common": "^4.0.0"
   },
   "devDependencies": {
-    "@angular/core": "^4.0.2",
     "@angular/common": "^4.0.2",
     "@angular/compiler": "^4.0.2",
     "@angular/compiler-cli": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "copyfiles": "^1.2.0",
     "rollup": "^0.41.6",
     "rxjs": "^5.3.0",
     "tslint": "^5.1.0",
