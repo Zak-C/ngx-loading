@@ -1,1 +1,0 @@
-[{"__symbolic":"module","version":3,"metadata":{},"exports":[{"from":"./ngx-loading.module","export":["LoadingModule"]},{"from":"./ngx-loading.config","export":["ANIMATION_TYPES"]}]},{"__symbolic":"module","version":1,"metadata":{},"exports":[{"from":"./ngx-loading.module","export":["LoadingModule"]},{"from":"./ngx-loading.config","export":["ANIMATION_TYPES"]}]}]
