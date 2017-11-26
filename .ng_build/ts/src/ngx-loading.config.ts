@@ -31,8 +31,14 @@ export class LoadingConfig implements ILoadingConfig {
 }
 
 export const ANIMATION_TYPES = {
-    threeBounce: 'three-bounce',
-    rotatingPlane: 'rotating-plane',
+    chasingDots: 'chasing-dots',
+    circle: 'sk-circle',
+    circleSwish: 'circleSwish',
+    cubeGrid: 'sk-cube-grid',
+    doubleBounce: 'double-bounce',
+    pulse: 'pulse',
     rectangleBounce: 'rectangle-bounce',
+    rotatingPlane: 'rotating-plane',
+    threeBounce: 'three-bounce',
     wanderingCubes: 'wandering-cubes'
 }
