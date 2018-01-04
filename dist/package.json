@@ -1,7 +1,7 @@
 {
   "name": "ngx-loading",
-  "version": "1.0.9",
-  "description": "A loading spinner for Angular 4.",
+  "version": "1.0.10",
+  "description": "A customisable loading spinner for Angular 4+ applications.",
   "scripts": {
     "publish": "npm publish dist",
     "packagr": "ng-packagr -p ng-package.json"
@@ -14,13 +14,24 @@
     "Angular",
     "Angular 4",
     "Angular4",
+    "Angular 5",
+    "Angular5",
     "ng",
     "load",
     "loading",
     "spinner",
     "busy",
     "wait",
-    "ngx-loading"
+    "ngx-loading",
+    "Angular loading",
+    "Angular 4 loading",
+    "Angular 5 loading",
+    "Angular spinner",
+    "Angular 4 spinner",
+    "Angular 5 spinner",
+    "Angular loading spinner",
+    "Angular 4 loading spinner",
+    "Angular 5 loading spinner"
   ],
   "author": "Zak Cox",
   "license": "ISC",
