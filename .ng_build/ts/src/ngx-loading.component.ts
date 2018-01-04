@@ -63,7 +63,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
     styles: [
         `       
             .backdrop {
-                z-index: 50;
+                z-index: 1999;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -98,7 +98,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
 
                 -webkit-transform: translateZ(0);
                 -ms-transform: translateZ(0);
@@ -136,7 +136,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 overflow: hidden;
                 width: 1em;
                 height: 1em;
-                z-index: 51;
+                z-index: 2000;
                 font-size: 60px;
                 border-radius: 50%;
                 margin: auto;
@@ -146,7 +146,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
 
                 -webkit-transform: translateZ(0);
                 -ms-transform: translateZ(0);
@@ -233,7 +233,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
             }
               
             .sk-cube-grid .sk-cube {
@@ -324,7 +324,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
             }
               
             .double-bounce1, .double-bounce2 {
@@ -375,7 +375,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
               
                 border-radius: 100%;  
                 -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -415,7 +415,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 bottom: 0;
                 height: 20px;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
             }
 
             .spinner-three-bounce > div {
@@ -469,7 +469,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
                 -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
                 animation: sk-rotateplane 1.2s infinite ease-in-out;
             }
@@ -508,7 +508,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
             }
 
             .spinner-rectangle-bounce > div {
@@ -571,7 +571,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
             }
 
             .cube1, .cube2 {
@@ -631,7 +631,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
               }
               .sk-circle .sk-child {
                 width: 100%;
@@ -763,7 +763,7 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 right: 0;
                 bottom: 0;
                 margin: auto;
-                z-index: 51;
+                z-index: 2000;
                 text-align: center;
                 
                 -webkit-animation: sk-rotate 2.0s infinite linear;
