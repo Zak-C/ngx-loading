@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A customisable loading spinner for Angular 4+ applications.",
   "scripts": {
     "publish": "npm publish dist",
@@ -34,7 +34,7 @@
     "Angular 5 loading spinner"
   ],
   "author": "Zak Cox",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Zak-C/ngx-loading/issues"
   },
