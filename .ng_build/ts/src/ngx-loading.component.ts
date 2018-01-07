@@ -845,17 +845,19 @@ export class LoadingComponent implements OnInit {
     ngOnInit() {
         for (let option in this.defaultConfig) {
             if (typeof this.loadingConfig[option] == "boolean") {
-                this.loadingConfig[option] = this.config[option] != null ? this.config[option] : false;
-
-                if (this.loadingConfig[option] == false) {
-                    this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+                if (this.config[option] != null) {
+                    this.loadingConfig[option] = this.config[option];
+                    continue;
                 }
+
+                this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
             } else {
-                this.loadingConfig[option] = this.config[option] != null ? this.config[option] : '';
-
-                if (this.loadingConfig[option] == '') {
-                    this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
+                if (this.config[option] != null) {
+                    this.loadingConfig[option] = this.config[option];
+                    continue;
                 }
+
+                this.loadingConfig[option] = this.loadingConfigService.loadingConfig[option] != null ? this.loadingConfigService.loadingConfig[option] : this.defaultConfig[option];
             }
         };
     }
