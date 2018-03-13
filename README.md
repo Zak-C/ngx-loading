@@ -16,6 +16,22 @@ npm install --save ngx-loading
 ```
 
 ## Getting started
+Import the style in your .angular-cli.json
+
+```json
+"styles": [
+    "...",
+    "../node_modules/ngx-loading/scss/ngx-loading.scss",
+    "...
+]
+```
+
+ or in your main style.scss
+
+```scss
+@import "../node_modules/ngx-loading/scss/ngx-loading.scss";
+```
+
 Import the `LoadingModule` in your root application module:
 
 ```typescript
