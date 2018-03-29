@@ -1,0 +1,4 @@
+{
+  "entry": "./src/ngx-loading.component.scss",
+  "dest": "dist/scss/ngx-loading.scss"
+}

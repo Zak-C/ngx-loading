@@ -1,0 +1,61 @@
+<div *ngIf="show" class="backdrop" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}" [ngStyle]="{'border-radius': loadingConfig?.backdropBorderRadius, 'background-color': loadingConfig?.backdropBackgroundColour}"></div>
+<div *ngIf="show">
+  <div class="spinner-circle" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.circle" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}"
+    [ngStyle]="{'border-top-color': loadingConfig?.secondaryColour, 'border-right-color': loadingConfig?.secondaryColour, 'border-bottom-color': loadingConfig?.secondaryColour, 'border-left-color': loadingConfig?.primaryColour}"></div>
+
+  <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.cubeGrid" class="sk-cube-grid" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="sk-cube sk-cube1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube2" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube3" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube4" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube5" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube6" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube7" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube8" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="sk-cube sk-cube9" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+  </div>
+
+  <div *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.threeBounce" class="spinner-three-bounce"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="bounce1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="bounce2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
+    <div class="bounce3" [ngStyle]="{'background-color': loadingConfig?.tertiaryColour}"></div>
+  </div>
+
+  <div class="spinner-sk-rotateplane" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rotatingPlane"
+    [ngStyle]="{'background-color': loadingConfig?.primaryColour}" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}"></div>
+
+  <div class="spinner-rectangle-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.rectangleBounce"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="rect1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="rect2" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="rect3" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="rect4" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="rect5" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+  </div>
+
+  <div class="spinner-wandering-cubes" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.wanderingCubes"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="cube1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="cube2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
+  </div>
+
+  <div class="spinner-double-bounce" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.doubleBounce"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="double-bounce1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="double-bounce2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
+  </div>
+
+  <div class="spinner-pulse" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.pulse" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}"
+    [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+
+  <div class="spinner-chasing-dots" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.chasingDots"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}">
+    <div class="dot1" [ngStyle]="{'background-color': loadingConfig?.primaryColour}"></div>
+    <div class="dot2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
+  </div>
+
+  <div class="spinner-circle-swish" *ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.circleSwish"
+    [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}" [ngStyle]="{'color': loadingConfig?.primaryColour}"></div>
+
+</div>
