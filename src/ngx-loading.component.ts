@@ -809,7 +809,8 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
               }
 
             .full-screen {
-                position: fixed;
+                position: fixed;                
+                position: -ms-page;
             }
         `
     ]

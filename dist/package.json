@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A customisable loading spinner for Angular 4+ applications.",
   "scripts": {
     "publish": "npm publish dist",
