@@ -13,7 +13,7 @@ A customisable loading spinner for Angular applications.
 5. [Config options](#config-options)
 
 ## Demo
-Check out the interactive demo on [StackBlitz](https://stackblitz.com "ngx-loading StackBlitz demo").
+Check out the interactive demo on [StackBlitz](https://stackblitz.com/github/Zak-C/ngx-loading "ngx-loading StackBlitz demo").
 
 ## Installation
 Install ngx-loading via NPM, using the command below. 
