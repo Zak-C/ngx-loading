@@ -1,64 +1,52 @@
 {
-  "name": "ngx-loading",
-  "version": "1.0.15",
-  "description": "A customisable loading spinner for Angular 4+ applications.",
+  "name": "ngx-loading-app",
+  "version": "3.0.0",
   "scripts": {
-    "publish": "npm publish dist",
-    "packagr": "ng-packagr -p ng-package.json"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zak-C/ngx-loading.git"
-  },
-  "keywords": [
-    "Angular",
-    "Angular 4",
-    "Angular4",
-    "Angular 5",
-    "Angular5",
-    "ng",
-    "load",
-    "loading",
-    "spinner",
-    "busy",
-    "wait",
-    "ngx-loading",
-    "Angular loading",
-    "Angular 4 loading",
-    "Angular 5 loading",
-    "Angular spinner",
-    "Angular 4 spinner",
-    "Angular 5 spinner",
-    "Angular loading spinner",
-    "Angular 4 loading spinner",
-    "Angular 5 loading spinner"
-  ],
-  "author": "Zak Cox",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Zak-C/ngx-loading/issues"
-  },
-  "homepage": "https://github.com/Zak-C/ngx-loading#readme",
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public_api.ts"
-    }
-  },
-  "peerDependencies": {
-    "@angular/core": ">=4.0.0",
-    "@angular/common": ">=4.0.0"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^6.1.0",
+    "@angular/common": "^6.1.0",
+    "@angular/compiler": "^6.1.0",
+    "@angular/core": "^6.1.0",
+    "@angular/forms": "^6.1.0",
+    "@angular/http": "^6.1.0",
+    "@angular/platform-browser": "^6.1.0",
+    "@angular/platform-browser-dynamic": "^6.1.0",
+    "@angular/router": "^6.1.0",
+    "core-js": "^2.5.4",
+    "rxjs": "^6.0.0",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular/common": "^4.0.2",
-    "@angular/compiler": "^4.0.2",
-    "@angular/compiler-cli": "^4.0.2",
-    "@angular/core": "^4.0.2",
-    "ng-packagr": "1.4.1",
-    "rollup": "^0.41.6",
-    "rxjs": "^5.3.0",
-    "tslint": "^5.1.0",
-    "typescript": "^2.2.2",
-    "webpack": "^2.4.1",
-    "zone.js": "^0.8.5"
+    "@angular-devkit/build-angular": "~0.7.0",
+    "@angular-devkit/build-ng-packagr": "~0.7.0",
+    "@angular/cli": "~6.1.1",
+    "@angular/compiler-cli": "^6.1.0",
+    "@angular/language-service": "^6.1.0",
+    "@types/jasmine": "~2.8.6",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.2.1",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~1.7.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.0",
+    "karma-jasmine": "~1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^3.0.0",
+    "protractor": "~5.3.0",
+    "ts-node": "~5.0.1",
+    "tsickle": ">=0.29.0",
+    "tslib": "^1.9.0",
+    "tslint": "~5.9.1",
+    "typescript": "~2.7.2"
   }
 }

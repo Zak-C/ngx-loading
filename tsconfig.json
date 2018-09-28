@@ -1,32 +1,29 @@
 {
-    "compilerOptions": {
-        "module": "es2015",
-        "moduleResolution": "node",
-        "target": "ES5",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
-        "declaration": true,
-        "stripInternal": true,
-        "skipLibCheck": true,
-        "strictNullChecks": true,
-        "noImplicitAny": true,
-        "baseUrl": ".",
-        "outDir": "dist",
-        "rootDir": ".",
-        "inlineSources": true,
-        "lib": [
-            "es2015",
-            "dom"
-        ],
-        "paths": {
-            "@angular/core": ["node_modules/@angular/core"]
-        }
-    },
-    "files": [
-        "index.ts"
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "angularCompilerOptions": {
-        "strictMetadataEmit": true
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "ngx-loading": [
+        "dist/ngx-loading"
+      ],
+      "ngx-loading/*": [
+        "dist/ngx-loading/*"
+      ]
     }
+  }
 }
