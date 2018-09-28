@@ -1,5 +1,3 @@
-import { SafeHtml } from '@angular/platform-browser';
-
 export interface INgxLoadingConfig {
     backdropBorderRadius?: string;
     backdropBackgroundColour?: string;
@@ -8,8 +6,7 @@ export interface INgxLoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
-    innerHtml?: string | SafeHtml;
-    [key: string]: string | boolean | SafeHtml | undefined;
+    [key: string]: string | boolean | undefined;
 }
 
 export class NgxLoadingConfig implements INgxLoadingConfig {
@@ -20,8 +17,7 @@ export class NgxLoadingConfig implements INgxLoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
-    innerHtml?: string | SafeHtml;
-    [key: string]: string | boolean | SafeHtml | undefined;
+    [key: string]: string | boolean | undefined;
 
     constructor(config: INgxLoadingConfig = {}) {
         this.backdropBorderRadius = config.backdropBorderRadius;
@@ -31,7 +27,6 @@ export class NgxLoadingConfig implements INgxLoadingConfig {
         this.primaryColour = config.primaryColour;
         this.secondaryColour = config.secondaryColour;
         this.tertiaryColour = config.tertiaryColour;
-        this.innerHtml = config.innerHtml;
     }
 }
 
