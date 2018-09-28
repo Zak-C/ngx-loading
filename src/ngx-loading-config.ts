@@ -27,7 +27,6 @@ export class NgxLoadingConfig implements INgxLoadingConfig {
         this.primaryColour = config.primaryColour;
         this.secondaryColour = config.secondaryColour;
         this.tertiaryColour = config.tertiaryColour;
-        this.innerHtml = config.innerHtml;
     }
 }
 
