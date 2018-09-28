@@ -1,0 +1,89 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.loading-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loading {
+  height: 189px;
+  width: 189px;
+  position: relative;
+  margin: 0 15px 15px 0;
+  padding: 15px;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+.loading p {
+  margin: 0 0 10px 0;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 15px 15px 15px 0;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  background-color: #666666;
+}
+
+button:hover {
+  background-color: #797979;
+}
+
+button#toggle-loading-button {
+  background-color: #dd0031;
+}
+
+button#toggle-loading-button:hover {
+  background-color: #ff0032;
+}
+
+button#toggle-colours-button {
+  background-color: #006ddd;
+}
+
+button#toggle-colours-button:hover {
+  background-color: #0c7aea;
+}
+
+button#toggle-template-button {
+  background-color: black;
+}
+
+button#toggle-template-button:hover {
+  background-color: #303030;
+}
+
+.custom-class {
+  top: 0;
+  z-index: 2002;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000ba;
+  border-radius: 3px;
+}
+
+.custom-class h3 {
+  color: white;
+}

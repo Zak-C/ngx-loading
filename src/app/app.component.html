@@ -1,0 +1,108 @@
+<div id="header">
+  <img src="../assets/angular.png" alt="angular icon">
+  <h1>ngx-loading</h1>
+</div>
+
+<button id="toggle-loading-button" (click)="loading = !loading">Toggle loading</button>
+<button id="toggle-colours-button" (click)="toggleColours()">Toggle colours</button>
+<button id="toggle-template-button" (click)="toggleTemplate()">Toggle template</button>
+
+<ng-template #customLoadingTemplate>
+  <div class="custom-class">
+    <h3>
+      Loading...
+    </h3>
+    <button (click)="showAlert()">
+      Click me!
+    </button>
+  </div>
+</ng-template>
+
+<div class="loading-container">
+  <div class="loading">
+    <h2>threeBounce</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{primaryColour: primaryColour, secondaryColour: secondaryColour, tertiaryColour: primaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>chasingDots</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.chasingDots, primaryColour: primaryColour, secondaryColour: secondaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>doubleBounce</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.doubleBounce, primaryColour: primaryColour, secondaryColour: secondaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>circle</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.circle, primaryColour: primaryColour, secondaryColour: secondaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>circleSwish</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.circleSwish, primaryColour: primaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>cubeGrid</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.cubeGrid, primaryColour: primaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>pulse</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.pulse, primaryColour: primaryColour, secondaryColour: secondaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>rectangleBounce</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.rectangleBounce, primaryColour: primaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>rotatingPlane</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.rotatingPlane, primaryColour: primaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>wanderingCubes</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading [show]="loading" [config]="{animationType: ngxLoadingAnimationTypes.wanderingCubes, primaryColour: primaryColour, secondaryColour: secondaryColour, backdropBorderRadius: '3px'}"
+      [template]="loadingTemplate"></ngx-loading>
+  </div>
+
+  <div class="loading">
+    <h2>none</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.</p>
+    <ngx-loading #ngxLoading [show]="loading" [config]="config" [template]="loadingTemplate"></ngx-loading>
+  </div>
+</div>
