@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxLoadingModule } from 'projects/ngx-loading/src/public_api';
+import { NgxLoadingModule } from '../../projects/ngx-loading/src/public_api';
 import { AppComponent } from './app.component';
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component, ViewChild, TemplateRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ngxLoadingAnimationTypes, NgxLoadingComponent } from 'projects/ngx-loading/src/public_api';
+import { ngxLoadingAnimationTypes, NgxLoadingComponent } from '../../projects/ngx-loading/src/public_api';
 
 const PrimaryWhite = '#ffffff';
 const SecondaryGrey = '#ccc';
