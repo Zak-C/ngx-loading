@@ -14,5 +14,7 @@ Thumbs.db
 /dist
 .editorconfig
 package-lock.json
+tslint.json
+.ng_build
 # Don't ignore the following files
 !rollup.config.js
