@@ -1,12 +1,11 @@
-import { Injectable, Inject, Optional } from '@angular/core';
-
-import { ILoadingConfig, LoadingConfig } from './ngx-loading.config';
+import { Inject, Injectable, Optional } from '@angular/core';
+import { INgxLoadingConfig, NgxLoadingConfig } from './ngx-loading-config';
 
 @Injectable()
-export class LoadingConfigService {
-    public loadingConfig: ILoadingConfig;
+export class NgxLoadingService {
+  public loadingConfig: INgxLoadingConfig;
 
-    constructor( @Optional() @Inject('loadingConfig') private config: ILoadingConfig) {
-        this.loadingConfig = config || new LoadingConfig();
-    }
+  constructor(@Optional() @Inject('loadingConfig') private config: INgxLoadingConfig) {
+    this.loadingConfig = this.config || new NgxLoadingConfig();
+  }
 }
