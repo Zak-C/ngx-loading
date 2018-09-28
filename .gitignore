@@ -11,5 +11,8 @@ Thumbs.db
 /.vscode
 *.tgz
 *.ngsummary.json
+/dist
+.editorconfig
+package-lock.json
 # Don't ignore the following files
 !rollup.config.js
