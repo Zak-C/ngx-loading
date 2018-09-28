@@ -23,9 +23,9 @@ Install ngx-loading via NPM, using the command below.
 npm install --save ngx-loading
 ```
 
-NOTE: Version 3.0.0 of this package (latest) requires Angular 6.x.x as a dependency. If you are using Angular 4 / 5, please install version 2.0.0:
+NOTE: Version 3 of this package (latest) requires Angular 6 as a dependency. If you are using Angular 4 / 5, please install version 2.0.1:
 ```shell
-npm install --save ngx-loading@2.0.0
+npm install --save ngx-loading@2.0.1
 ```
 
 ## Getting started
