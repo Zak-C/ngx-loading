@@ -1,5 +1,6 @@
-import { Component, ViewChild, TemplateRef } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+
 import { ngxLoadingAnimationTypes, NgxLoadingComponent } from '../../projects/ngx-loading/src/public_api';
 
 const PrimaryWhite = '#ffffff';
@@ -13,8 +14,8 @@ const SecondaryBlue = '#006ddd';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('ngxLoading') ngxLoadingComponent: NgxLoadingComponent;
-  @ViewChild('customLoadingTemplate') customLoadingTemplate: TemplateRef<any>;
+  @ViewChild('ngxLoading', { static: false }) ngxLoadingComponent: NgxLoadingComponent;
+  @ViewChild('customLoadingTemplate', { static: false }) customLoadingTemplate: TemplateRef<any>;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public loading = true;
   public primaryColour = PrimaryWhite;
