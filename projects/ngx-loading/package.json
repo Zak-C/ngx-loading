@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "A customisable loading spinner for Angular applications.",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "keywords": [
     "Angular",
-    "Angular 7",
+    "Angular 8",
     "ng",
     "ngx",
     "load",
@@ -18,11 +18,11 @@
     "wait",
     "ngx-loading",
     "Angular loading",
-    "Angular 7 loading",
+    "Angular 8 loading",
     "Angular spinner",
-    "Angular 7 spinner",
+    "Angular 8 spinner",
     "Angular loading spinner",
-    "Angular 7 loading spinner"
+    "Angular 8 loading spinner"
   ],
   "author": "Zak Cox",
   "license": "MIT",
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/Zak-C/ngx-loading#readme",
   "peerDependencies": {
-    "@angular/common": "^7.0.0",
-    "@angular/core": "^7.0.0"
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
   },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
