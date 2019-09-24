@@ -3,8 +3,8 @@ import { ngxLoadingAnimationTypes, INgxLoadingConfig, NgxLoadingConfig } from '.
 import { NgxLoadingService } from './ngx-loading.service';
 
 @Component({
-    selector: 'ngx-loading',
-    template: `
+  selector: 'ngx-loading',
+  template: `
     <div *ngIf="show">
       <div class="backdrop" [ngClass]="{'full-screen' : config?.fullScreenBackdrop == true}" [ngStyle]="{'border-radius': config?.backdropBorderRadius, 'background-color': config?.backdropBackgroundColour}"></div>
 
@@ -68,8 +68,8 @@ import { NgxLoadingService } from './ngx-loading.service';
       </div>
     </div>
   `,
-    styles: [
-        `
+  styles: [
+    `
       .backdrop {
         z-index: 1999;
         position: absolute;
@@ -774,49 +774,49 @@ import { NgxLoadingService } from './ngx-loading.service';
           position: -ms-page;
       }
     `
-    ]
+  ]
 })
 export class NgxLoadingComponent implements OnInit {
-    @Input() show: boolean;
-    @Input() config: INgxLoadingConfig = new NgxLoadingConfig();
-    @Input() template: TemplateRef<any>;
-    private defaultConfig: INgxLoadingConfig = {
-        animationType: ngxLoadingAnimationTypes.threeBounce,
-        backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',
-        backdropBorderRadius: '0px',
-        fullScreenBackdrop: false,
-        primaryColour: '#ffffff',
-        secondaryColour: '#ffffff',
-        tertiaryColour: '#ffffff'
-    };
-    public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
+  @Input() show: boolean;
+  @Input() config: INgxLoadingConfig = new NgxLoadingConfig();
+  @Input() template: TemplateRef<any>;
+  private defaultConfig: INgxLoadingConfig = {
+    animationType: ngxLoadingAnimationTypes.threeBounce,
+    backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',
+    backdropBorderRadius: '0px',
+    fullScreenBackdrop: false,
+    primaryColour: '#ffffff',
+    secondaryColour: '#ffffff',
+    tertiaryColour: '#ffffff'
+  };
+  public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
 
-    constructor(private LoadingService: NgxLoadingService, private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(private LoadingService: NgxLoadingService, private changeDetectorRef: ChangeDetectorRef) { }
 
-    ngOnInit() {
-        this.setupConfig();
-    }
+  ngOnInit() {
+    this.setupConfig();
+  }
 
-    private setupConfig(): void {
-        for (const option in this.defaultConfig) {
-            if (typeof this.config[option] === 'boolean') {
-                if (this.config[option] != null) {
-                    continue;
-                }
-
-                this.config[option] = this.LoadingService.loadingConfig[option] != null ? this.LoadingService.loadingConfig[option] : this.defaultConfig[option];
-            } else {
-                if (this.config[option] != null) {
-                    continue;
-                }
-
-                this.config[option] = this.LoadingService.loadingConfig[option] != null ? this.LoadingService.loadingConfig[option] : this.defaultConfig[option];
-            }
+  private setupConfig(): void {
+    for (const option in this.defaultConfig) {
+      if (typeof this.config[option] === 'boolean') {
+        if (this.config[option] != null) {
+          continue;
         }
-    }
 
-    public setShow(show: boolean): void {
-        this.show = show;
-        this.changeDetectorRef.markForCheck();
+        this.config[option] = this.LoadingService.loadingConfig[option] != null ? this.LoadingService.loadingConfig[option] : this.defaultConfig[option];
+      } else {
+        if (this.config[option] != null) {
+          continue;
+        }
+
+        this.config[option] = this.LoadingService.loadingConfig[option] != null ? this.LoadingService.loadingConfig[option] : this.defaultConfig[option];
+      }
     }
+  }
+
+  public setShow(show: boolean): void {
+    this.show = show;
+    this.changeDetectorRef.markForCheck();
+  }
 }
