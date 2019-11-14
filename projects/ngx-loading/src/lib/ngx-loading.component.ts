@@ -771,7 +771,6 @@ import { NgxLoadingService } from './ngx-loading.service';
 
       .full-screen {
           position: fixed;
-          position: -ms-page;
       }
     `
   ]
