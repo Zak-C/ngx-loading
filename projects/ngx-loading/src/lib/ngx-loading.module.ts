@@ -9,7 +9,7 @@ import { NgxLoadingComponent } from './ngx-loading.component';
   exports: [NgxLoadingComponent]
 })
 export class NgxLoadingModule {
-  static forRoot(loadingConfig: INgxLoadingConfig): ModuleWithProviders {
+  static forRoot(loadingConfig: INgxLoadingConfig): ModuleWithProviders<NgxLoadingModule> {
     return {
       ngModule: NgxLoadingModule,
       providers: [{ provide: 'loadingConfig', useValue: loadingConfig }]

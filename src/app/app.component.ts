@@ -13,8 +13,8 @@ const SecondaryBlue = '#006ddd';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('ngxLoading', { static: false }) ngxLoadingComponent: NgxLoadingComponent;
-  @ViewChild('customLoadingTemplate', { static: false }) customLoadingTemplate: TemplateRef<any>;
+  @ViewChild('ngxLoading') ngxLoadingComponent: NgxLoadingComponent;
+  @ViewChild('customLoadingTemplate') customLoadingTemplate: TemplateRef<any>;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public loading = true;
   public primaryColour = PrimaryWhite;

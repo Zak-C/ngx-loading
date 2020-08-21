@@ -61,7 +61,7 @@ import { NgxLoadingService } from './ngx-loading.service';
           <div class="bounce2" [ngStyle]="{'background-color': config?.secondaryColour}"></div>
           <div class="bounce3" [ngStyle]="{'background-color': config?.tertiaryColour}"></div>
         </div>
-        
+
         <ng-container *ngIf="template">
             <ng-container *ngTemplateOutlet="template"></ng-container>
         </ng-container>
