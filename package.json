@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading-app",
-  "version": "8.0.0",
+  "version": "10.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
