@@ -8,7 +8,7 @@
   },
   "keywords": [
     "Angular",
-    "Angular 8",
+    "Angular 10",
     "ng",
     "ngx",
     "load",
@@ -18,11 +18,11 @@
     "wait",
     "ngx-loading",
     "Angular loading",
-    "Angular 8 loading",
+    "Angular 10 loading",
     "Angular spinner",
-    "Angular 8 spinner",
+    "Angular 10 spinner",
     "Angular loading spinner",
-    "Angular 8 loading spinner"
+    "Angular 10 loading spinner"
   ],
   "author": "Zak Cox",
   "license": "MIT",
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/Zak-C/ngx-loading#readme",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^10.0.11",
+    "@angular/core": "^10.0.11"
   },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
@@ -40,5 +40,8 @@
       "entryFile": "src/public_api.ts"
     },
     "dest": "../dist/ngx-loading"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
