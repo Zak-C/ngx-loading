@@ -34,6 +34,9 @@
     "@angular/common": "^8.0.0",
     "@angular/core": "^8.0.0"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
     "lib": {
