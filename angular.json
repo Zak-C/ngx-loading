@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ngx-loading-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -29,6 +30,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [{
                 "replace": "src/environments/environment.ts",
                 "with": "src/environments/environment.prod.ts"
@@ -135,7 +142,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-loading/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-loading/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
