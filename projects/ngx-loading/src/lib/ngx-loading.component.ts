@@ -777,9 +777,10 @@ import { NgxLoadingService } from './ngx-loading.service';
   ]
 })
 export class NgxLoadingComponent implements OnInit {
-  @Input() show: boolean;
+  @Input() show = false;
   @Input() config: INgxLoadingConfig = new NgxLoadingConfig();
-  @Input() template: TemplateRef<any>;
+  @Input()
+  template!: TemplateRef<any>;
   private defaultConfig: INgxLoadingConfig = {
     animationType: ngxLoadingAnimationTypes.threeBounce,
     backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',

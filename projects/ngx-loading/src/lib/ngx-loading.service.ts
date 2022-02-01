@@ -11,3 +11,4 @@ export class NgxLoadingService {
     this.loadingConfig = this.config || new NgxLoadingConfig();
   }
 }
+ 
