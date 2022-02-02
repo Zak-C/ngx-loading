@@ -1,6 +1,12 @@
-import { Component, ViewChild, TemplateRef, ViewContainerRef } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ngxLoadingAnimationTypes, NgxLoadingComponent } from 'ngx-loading';
+import { ngxLoadingAnimationTypes } from '../../../../projects/ngx-loading/src/lib/ngx-loading-config';
+import { NgxLoadingComponent } from '../../../../projects/ngx-loading/src/lib/ngx-loading.component';
 
 const PrimaryWhite = '#ffffff';
 const SecondaryGrey = '#ccc';
@@ -10,7 +16,7 @@ const SecondaryBlue = '#1976d2';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   @ViewChild('ngxLoading', { static: false })
@@ -26,9 +32,18 @@ export class AppComponent {
   public secondaryColour = SecondaryGrey;
   public coloursEnabled = false;
   public loadingTemplate!: TemplateRef<any>;
-  public config = { animationType: ngxLoadingAnimationTypes.none, primaryColour: this.primaryColour, secondaryColour: this.secondaryColour, tertiaryColour: this.primaryColour, backdropBorderRadius: '3px' };
+  public config = {
+    animationType: ngxLoadingAnimationTypes.none,
+    primaryColour: this.primaryColour,
+    secondaryColour: this.secondaryColour,
+    tertiaryColour: this.primaryColour,
+    backdropBorderRadius: '3px',
+  };
 
-  constructor(private sanitizer: DomSanitizer, private viewContainerRef: ViewContainerRef) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private viewContainerRef: ViewContainerRef
+  ) {}
 
   public toggleColours(): void {
     this.coloursEnabled = !this.coloursEnabled;

@@ -61,9 +61,7 @@
               "projects/ngx-loading-sample-app/src/favicon.ico",
               "projects/ngx-loading-sample-app/src/assets"
             ],
-            "styles": [
-              "projects/ngx-loading-sample-app/src/styles.scss"
-            ],
+            "styles": ["projects/ngx-loading-sample-app/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -77,7 +75,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [
@@ -89,8 +87,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
-              "optimization": false,
+              "aot": true,
+              "buildOptimizer": true,
+              "optimization": true,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
@@ -129,9 +128,7 @@
               "projects/ngx-loading-sample-app/src/favicon.ico",
               "projects/ngx-loading-sample-app/src/assets"
             ],
-            "styles": [
-              "projects/ngx-loading-sample-app/src/styles.scss"
-            ],
+            "styles": ["projects/ngx-loading-sample-app/src/styles.scss"],
             "scripts": []
           }
         }

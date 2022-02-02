@@ -1,6 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { ngxLoadingAnimationTypes, NgxLoadingConfig } from './ngx-loading-config';
-
+import {
+  ngxLoadingAnimationTypes,
+  NgxLoadingConfig,
+} from './ngx-loading-config';
 import { NgxLoadingService } from './ngx-loading.service';
 
 describe('NgxLoadingService', () => {
