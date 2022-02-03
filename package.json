@@ -1,5 +1,6 @@
 {
   "name": "ngx-loading",
+  "version": "13.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
