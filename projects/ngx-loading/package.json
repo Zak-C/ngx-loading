@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "8.0.0",
+  "version": "13.0.0-rc.1",
   "description": "A customisable loading spinner for Angular applications.",
   "repository": {
     "type": "git",
@@ -8,7 +8,6 @@
   },
   "keywords": [
     "Angular",
-    "Angular 8",
     "ng",
     "ngx",
     "load",
@@ -16,13 +15,28 @@
     "spinner",
     "busy",
     "wait",
+    "loading",
+    "loading-animations",
+    "loading-indicator",
+    "loading-screen",
+    "loadingview",
+    "loading-page",
+    "ngx",
+    "ng13",
+    "loadingscreen",
+    "progress",
+    "progress-loader",
+    "progress-indicators",
+    "progress-circle",
+    "loaders",
+    "ivy",
     "ngx-loading",
     "Angular loading",
-    "Angular 8 loading",
+    "Angular 13 loading",
     "Angular spinner",
-    "Angular 8 spinner",
+    "Angular 13 spinner",
     "Angular loading spinner",
-    "Angular 8 loading spinner"
+    "Angular 13 loading spinner"
   ],
   "author": "Zak Cox",
   "license": "MIT",
@@ -31,14 +45,10 @@
   },
   "homepage": "https://github.com/Zak-C/ngx-loading#readme",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0"
   },
-  "ngPackage": {
-    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-    "lib": {
-      "entryFile": "src/public_api.ts"
-    },
-    "dest": "../dist/ngx-loading"
+  "dependencies": {
+    "tslib": "^2.3.0"
   }
 }

@@ -4,12 +4,14 @@
 /dist
 /tmp
 /out-tsc
-/projects/dist
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
 /node_modules
-package-lock.json
-.npmrc
+
+# profiling files
+chrome-profiler-events*.json
 
 # IDEs and editors
 /.idea
@@ -26,9 +28,10 @@ package-lock.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.editorconfig
+.history/*
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
