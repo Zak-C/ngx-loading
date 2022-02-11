@@ -4,21 +4,17 @@ import { INgxLoadingConfig } from './ngx-loading-config';
 import { NgxLoadingComponent } from './ngx-loading.component';
 
 @NgModule({
-  declarations: [
-    NgxLoadingComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    NgxLoadingComponent
-  ]
+  declarations: [NgxLoadingComponent],
+  imports: [CommonModule],
+  exports: [NgxLoadingComponent],
 })
 export class NgxLoadingModule {
-  static forRoot(loadingConfig: INgxLoadingConfig): ModuleWithProviders<NgxLoadingModule> {
+  static forRoot(
+    loadingConfig: INgxLoadingConfig
+  ): ModuleWithProviders<NgxLoadingModule> {
     return {
       ngModule: NgxLoadingModule,
-      providers: [{ provide: 'loadingConfig', useValue: loadingConfig }]
+      providers: [{ provide: 'loadingConfig', useValue: loadingConfig }],
     };
   }
 }

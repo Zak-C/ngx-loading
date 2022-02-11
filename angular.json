@@ -31,6 +31,15 @@
             "tsConfig": "projects/ngx-loading/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-loading/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-loading/**/*.ts",
+              "projects/ngx-loading/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -130,6 +139,15 @@
             ],
             "styles": ["projects/ngx-loading-sample-app/src/styles.scss"],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-loading-sample-app/**/*.ts",
+              "projects/ngx-loading-sample-app/**/*.html"
+            ]
           }
         }
       }
