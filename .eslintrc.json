@@ -1,23 +1,54 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "@angular-eslint"],
-  "env": {
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "rules": {
-    "@typescript-eslint/consistent-type-imports": "error",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "_"
-      }
+    "root": true,
+    "ignorePatterns": [
+      "projects/**/*"
     ],
-    "@typescript-eslint/array-type": "error"
+    "overrides": [
+      {
+        "files": [
+          "*.ts"
+        ],
+        "parserOptions": {
+          "project": [
+            "tsconfig.json",
+            "e2e/tsconfig.json"
+          ],
+          "createDefaultProgram": true
+        },
+        "extends": [
+            "plugin:@angular-eslint/recommended",
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:@typescript-eslint/recommended-requiring-type-checking",
+            "plugin:@angular-eslint/template/process-inline-templates"
+        ],
+        "rules": {
+          "@angular-eslint/component-selector": [
+            "error",
+            {
+              "type": "element",
+              "prefix": "app",
+              "style": "kebab-case"
+            }
+          ],
+          "@angular-eslint/directive-selector": [
+            "error",
+            {
+              "type": "attribute",
+              "prefix": "app",
+              "style": "camelCase"
+            }
+          ]
+        }
+      },
+      {
+        "files": [
+          "*.html"
+        ],
+        "extends": [
+          "plugin:@angular-eslint/template/recommended"
+        ],
+        "rules": {}
+      }
+    ]
   }
-}

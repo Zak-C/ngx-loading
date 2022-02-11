@@ -1,12 +1,7 @@
-import {
-  Component,
-  ViewChild,
-  TemplateRef,
-  ViewContainerRef,
-} from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import type { TemplateRef } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ngxLoadingAnimationTypes } from '../../../../projects/ngx-loading/src/lib/ngx-loading-config';
-import { NgxLoadingComponent } from '../../../../projects/ngx-loading/src/lib/ngx-loading.component';
+import type { NgxLoadingComponent } from '../../../../projects/ngx-loading/src/lib/ngx-loading.component';
 
 const PrimaryWhite = '#ffffff';
 const SecondaryGrey = '#ccc';
@@ -39,11 +34,6 @@ export class AppComponent {
     tertiaryColour: this.primaryColour,
     backdropBorderRadius: '3px',
   };
-
-  constructor(
-    private sanitizer: DomSanitizer,
-    private viewContainerRef: ViewContainerRef
-  ) {}
 
   public toggleColours(): void {
     this.coloursEnabled = !this.coloursEnabled;

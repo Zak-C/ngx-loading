@@ -1,5 +1,6 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { INgxLoadingConfig, NgxLoadingConfig } from './ngx-loading-config';
+import type { INgxLoadingConfig} from './ngx-loading-config';
+import { NgxLoadingConfig } from './ngx-loading-config';
 
 @Injectable({
   providedIn: 'root',

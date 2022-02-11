@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { INgxLoadingConfig } from './ngx-loading-config';
+import type { ModuleWithProviders} from '@angular/core';
+import { NgModule } from '@angular/core';
+import type { INgxLoadingConfig } from './ngx-loading-config';
 import { NgxLoadingComponent } from './ngx-loading.component';
 
 @NgModule({

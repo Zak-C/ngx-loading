@@ -1,13 +1,8 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  Input,
-  OnInit,
-  TemplateRef,
-} from '@angular/core';
+import { ChangeDetectorRef, OnInit, TemplateRef } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { INgxLoadingConfig } from './ngx-loading-config';
 import {
   ngxLoadingAnimationTypes,
-  INgxLoadingConfig,
   NgxLoadingConfig,
 } from './ngx-loading-config';
 import { NgxLoadingService } from './ngx-loading.service';
@@ -18,7 +13,7 @@ import { NgxLoadingService } from './ngx-loading.service';
     <div *ngIf="show">
       <div
         class="backdrop"
-        [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+        [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         [ngStyle]="{
           'border-radius': config?.backdropBorderRadius,
           'background-color': config?.backdropBackgroundColour
@@ -29,7 +24,7 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           class="spinner-circle"
           *ngSwitchCase="ngxLoadingAnimationTypes.circle"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
           [ngStyle]="{
             'border-top-color': config?.secondaryColour,
             'border-right-color': config?.secondaryColour,
@@ -41,7 +36,7 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           *ngSwitchCase="ngxLoadingAnimationTypes.cubeGrid"
           class="sk-cube-grid"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="sk-cube sk-cube1"
@@ -85,13 +80,13 @@ import { NgxLoadingService } from './ngx-loading.service';
           class="spinner-sk-rotateplane"
           *ngSwitchCase="ngxLoadingAnimationTypes.rotatingPlane"
           [ngStyle]="{ 'background-color': config?.primaryColour }"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         ></div>
 
         <div
           class="spinner-rectangle-bounce"
           *ngSwitchCase="ngxLoadingAnimationTypes.rectangleBounce"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="rect1"
@@ -118,7 +113,7 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           class="spinner-wandering-cubes"
           *ngSwitchCase="ngxLoadingAnimationTypes.wanderingCubes"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="cube1"
@@ -133,7 +128,7 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           class="spinner-double-bounce"
           *ngSwitchCase="ngxLoadingAnimationTypes.doubleBounce"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="double-bounce1"
@@ -148,14 +143,14 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           class="spinner-pulse"
           *ngSwitchCase="ngxLoadingAnimationTypes.pulse"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
           [ngStyle]="{ 'background-color': config?.primaryColour }"
         ></div>
 
         <div
           class="spinner-chasing-dots"
           *ngSwitchCase="ngxLoadingAnimationTypes.chasingDots"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="dot1"
@@ -170,19 +165,19 @@ import { NgxLoadingService } from './ngx-loading.service';
         <div
           class="spinner-circle-swish"
           *ngSwitchCase="ngxLoadingAnimationTypes.circleSwish"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
           [ngStyle]="{ color: config?.primaryColour }"
         ></div>
 
         <div
           *ngSwitchCase="ngxLoadingAnimationTypes.none"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         ></div>
 
         <div
           *ngSwitchDefault
           class="spinner-three-bounce"
-          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop == true }"
+          [ngClass]="{ 'full-screen': config?.fullScreenBackdrop === true }"
         >
           <div
             class="bounce1"
