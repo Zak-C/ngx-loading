@@ -26,7 +26,7 @@ export class AppComponent {
   public primaryColour = PrimaryWhite;
   public secondaryColour = SecondaryGrey;
   public coloursEnabled = false;
-  public loadingTemplate!: TemplateRef<any>;
+  public loadingTemplate = this.emptyLoadingTemplate;
   public config = {
     animationType: ngxLoadingAnimationTypes.none,
     primaryColour: this.primaryColour,

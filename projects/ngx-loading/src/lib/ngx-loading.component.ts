@@ -1056,30 +1056,19 @@ export class NgxLoadingComponent implements OnInit {
 
   private setupConfig(): void {
     for (const option in this.defaultConfig) {
-      if (typeof this.config[option] === 'boolean') {
-        if (this.config[option] != null) {
-          continue;
-        }
-
-        this.config[option] =
-          this.LoadingService.loadingConfig[option] != null
-            ? this.LoadingService.loadingConfig[option]
-            : this.defaultConfig[option];
-      } else {
-        if (this.config[option] != null) {
-          continue;
-        }
-
-        this.config[option] =
-          this.LoadingService.loadingConfig[option] != null
-            ? this.LoadingService.loadingConfig[option]
-            : this.defaultConfig[option];
+      if (this.config[option] != null) {
+        continue;
       }
+
+      this.config[option] =
+        this.LoadingService.loadingConfig[option] != null
+          ? this.LoadingService.loadingConfig[option]
+          : this.defaultConfig[option];
     }
   }
 
-  public setShow(show: boolean): void {
-    this.show = show;
-    this.changeDetectorRef.markForCheck();
-  }
+  // public setShow(show: boolean): void {
+  //   this.show = show;
+  //   this.changeDetectorRef.markForCheck();
+  // }
 }
