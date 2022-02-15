@@ -3,7 +3,6 @@ import type { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
 import type { INgxLoadingConfig } from './ngx-loading-config';
 import { NgxLoadingComponent } from './ngx-loading.component';
-const a = 2;
 @NgModule({
   declarations: [NgxLoadingComponent],
   imports: [CommonModule],
