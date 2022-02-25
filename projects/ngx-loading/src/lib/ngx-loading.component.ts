@@ -1,10 +1,11 @@
 import { ChangeDetectorRef, OnInit, TemplateRef } from '@angular/core';
 import { Component, Input } from '@angular/core';
-import { INgxLoadingConfig } from './ngx-loading-config';
 import {
   ngxLoadingAnimationTypes,
   NgxLoadingConfig,
 } from './ngx-loading-config';
+
+import { INgxLoadingConfig } from './ngx-loading-config';
 
 import { NgxLoadingService } from './ngx-loading.service';
 
