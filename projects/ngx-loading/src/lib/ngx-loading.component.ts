@@ -5,6 +5,7 @@ import {
   ngxLoadingAnimationTypes,
   NgxLoadingConfig,
 } from './ngx-loading-config';
+
 import { NgxLoadingService } from './ngx-loading.service';
 
 @Component({
