@@ -18,12 +18,12 @@ describe('NgxLoadingService', () => {
   });
 
   it('should use a default NgxLoadingConfig', () => {
-    var ngxLoadingConfig = new NgxLoadingConfig();
+    const ngxLoadingConfig = new NgxLoadingConfig();
     expect(service.loadingConfig).toEqual(ngxLoadingConfig);
   });
 
   it('should use a custom NgxLoadingConfig when initialised with one', () => {
-    var ngxLoadingConfig = new NgxLoadingConfig();
+    const ngxLoadingConfig = new NgxLoadingConfig();
     ngxLoadingConfig.animationType = ngxLoadingAnimationTypes.cubeGrid;
     ngxLoadingConfig.backdropBackgroundColour = '#ffffff';
     ngxLoadingConfig.backdropBorderRadius = '1px';
