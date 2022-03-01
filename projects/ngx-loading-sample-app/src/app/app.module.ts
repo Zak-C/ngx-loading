@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     NgxLoadingModule.forRoot({
       animationType: ngxLoadingAnimationTypes.wanderingCubes,
-      backdropBackgroundColour: 'rgba(0,0,0,0.5)',
+      backdropBackgroundColour: 'rgba(0,0,0,0.3)',
       backdropBorderRadius: '4px',
       primaryColour: '#ffffff',
       secondaryColour: '#ffffff',

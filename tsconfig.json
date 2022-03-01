@@ -12,10 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-loading": [
-        "dist/ngx-loading/ngx-loading",
-        "dist/ngx-loading"
-      ]
+      "ngx-loading": ["dist/ngx-loading/ngx-loading", "dist/ngx-loading"]
     },
     "declaration": false,
     "downlevelIteration": true,
@@ -24,10 +21,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
