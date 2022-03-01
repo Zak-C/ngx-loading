@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, OnInit, TemplateRef } from '@angular/core';
+import { OnInit, TemplateRef } from '@angular/core';
 import { Component, Input } from '@angular/core';
 import {
   ngxLoadingAnimationTypes,
@@ -1045,10 +1045,7 @@ export class NgxLoadingComponent implements OnInit {
   };
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
 
-  constructor(
-    private LoadingService: NgxLoadingService,
-    private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  constructor(private LoadingService: NgxLoadingService) {}
 
   ngOnInit() {
     this.setupConfig();
@@ -1066,9 +1063,4 @@ export class NgxLoadingComponent implements OnInit {
           : this.defaultConfig[option];
     }
   }
-
-  // public setShow(show: boolean): void {
-  //   this.show = show;
-  //   this.changeDetectorRef.markForCheck();
-  // }
 }
