@@ -3,6 +3,8 @@
 A customisable loading spinner for Angular applications.
 
 [![npm version](https://badge.fury.io/js/ngx-loading.svg)](https://badge.fury.io/js/ngx-loading)
+[![Monthly Downloads](https://img.shields.io/npm/dm/ngx-loading)]()
+![Known Vulnerabilities](https://snyk.io/test/github/Zak-C/ngx-loading/badge.svg)
 
 ![ngx-loading](https://cloud.githubusercontent.com/assets/26901242/25317405/05a1ce4a-2870-11e7-8693-ed2394b54cba.gif)
 
