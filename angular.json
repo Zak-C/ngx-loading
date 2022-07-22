@@ -77,7 +77,9 @@
               "projects/ngx-loading-sample-app/src/favicon.ico",
               "projects/ngx-loading-sample-app/src/assets"
             ],
-            "styles": ["projects/ngx-loading-sample-app/src/styles.scss"],
+            "styles": [
+              "projects/ngx-loading-sample-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -144,7 +146,9 @@
               "projects/ngx-loading-sample-app/src/favicon.ico",
               "projects/ngx-loading-sample-app/src/assets"
             ],
-            "styles": ["projects/ngx-loading-sample-app/src/styles.scss"],
+            "styles": [
+              "projects/ngx-loading-sample-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -167,5 +171,7 @@
       }
     }
   },
-  "defaultProject": "ngx-loading-sample-app"
+  "cli": {
+    "analytics": false
+  }
 }
