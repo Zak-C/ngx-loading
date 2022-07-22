@@ -19,5 +19,5 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
-    ng build --prod
+    ng build ngx-loading --prod
   displayName: 'npm install and build'
