@@ -49,7 +49,7 @@
     "lint-staged": "^12.3.4",
     "ng-packagr": "^14.1.0",
     "prettier": "2.5.1",
-    "typescript": "~4.7.4"
+    "typescript": "~4.8.0"
   },
   "lint-staged": {
     "*.ts": "eslint --fix",
