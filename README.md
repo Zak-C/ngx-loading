@@ -30,7 +30,7 @@ Install ngx-loading via NPM, using the command below.
 npm install --save ngx-loading
 ```
 
-NOTE: Version 14 of this package requires Angular 14 as a dependency. If you are using an older version of Angular, please install the relevant version e.g. 2.0.1 for Angular 2:
+NOTE: Version 15 of this package requires Angular 15 as a dependency. If you are using an older version of Angular, please install the relevant version e.g. 2.0.1 for Angular 2:
 
 ```shell
 npm install --save ngx-loading@2.0.1
