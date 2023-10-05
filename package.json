@@ -1,5 +1,5 @@
 {
-  "name": "ngx-loading",
+  "name": "@ravithb/ngx-loading",
   "version": "16.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "prepare": "husky install"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.8",
     "@angular/common": "^16.2.8",
