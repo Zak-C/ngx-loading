@@ -1,6 +1,6 @@
 {
   "name": "ngx-loading",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "A customisable loading spinner for Angular applications.",
   "repository": {
     "type": "git",
@@ -41,8 +41,8 @@
   },
   "homepage": "https://github.com/Zak-C/ngx-loading#readme",
   "peerDependencies": {
-    "@angular/common": "^16.0.0",
-    "@angular/core": "^16.0.0"
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
