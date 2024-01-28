@@ -120,10 +120,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngx-loading-sample-app:build:production"
+              "buildTarget": "ngx-loading-sample-app:build:production"
             },
             "development": {
-              "browserTarget": "ngx-loading-sample-app:build:development"
+              "buildTarget": "ngx-loading-sample-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -131,7 +131,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-loading-sample-app:build"
+            "buildTarget": "ngx-loading-sample-app:build"
           }
         },
         "test": {
