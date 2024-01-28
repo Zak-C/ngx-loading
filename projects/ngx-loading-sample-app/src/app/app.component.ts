@@ -17,9 +17,9 @@ export class AppComponent {
   @ViewChild('ngxLoading', { static: false })
   ngxLoadingComponent!: NgxLoadingComponent;
   @ViewChild('customLoadingTemplate', { static: false })
-  customLoadingTemplate!: TemplateRef<any>;
+  customLoadingTemplate!: TemplateRef<Element>;
   @ViewChild('emptyLoadingTemplate', { static: false })
-  emptyLoadingTemplate!: TemplateRef<any>;
+  emptyLoadingTemplate!: TemplateRef<Element>;
   showingTemplate = false;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public loading = true;

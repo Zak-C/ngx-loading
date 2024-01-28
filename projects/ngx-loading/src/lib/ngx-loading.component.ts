@@ -279,13 +279,15 @@ import { NgxLoadingService } from './ngx-loading.service';
         -webkit-transform: translateZ(0);
         -ms-transform: translateZ(0);
         transform: translateZ(0);
-        -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-        animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+        -webkit-animation: load6 1.7s infinite ease;
+        animation: load6 1.7s infinite ease;
       }
       @-webkit-keyframes load6 {
         0% {
           box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
             0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+
+          -webkit-transform: rotate(0deg);
         }
         5%,
         95% {
@@ -311,12 +313,16 @@ import { NgxLoadingService } from './ngx-loading.service';
         100% {
           box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
             0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+
+          -webkit-transform: rotate(360deg);
         }
       }
       @keyframes load6 {
         0% {
           box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
             0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+
+          transform: rotate(0deg);
         }
         5%,
         95% {
@@ -342,25 +348,7 @@ import { NgxLoadingService } from './ngx-loading.service';
         100% {
           box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
             0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-        }
-      }
-      @-webkit-keyframes round {
-        0% {
-          -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes round {
-        0% {
-          -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
+
           transform: rotate(360deg);
         }
       }
@@ -1033,7 +1021,7 @@ export class NgxLoadingComponent implements OnInit {
   @Input() show = false;
   @Input() config: INgxLoadingConfig = new NgxLoadingConfig();
   @Input()
-  template!: TemplateRef<any>;
+  template!: TemplateRef<Element>;
   private defaultConfig: INgxLoadingConfig = {
     animationType: ngxLoadingAnimationTypes.threeBounce,
     backdropBackgroundColour: 'rgba(0, 0, 0, 0.3)',
